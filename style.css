@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://ychef.files.bbci.co.uk/976x549/p03b33j5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#title {
+    font-size: 3rem;
+    animation: flicker 1s infinite;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+#controls input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+#connectBtn {
+    padding: 10px 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+#countryButtons button {
+    margin: 3px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#ipAndMap {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#ipList {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: scroll;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+}
+
+#ipList li {
+    padding: 5px;
+    margin: 2px 0;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#map {
+    flex-grow: 1;
+    height: 400px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
