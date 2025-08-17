@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>👻 Ghostly VPN</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+    <header>
+        <h1 id="title">👻 Ghostly VPN</h1>
+    </header>
+
+    <div id="controls">
+        <input type="text" id="search" placeholder="Search IP...">
+        <button id="connectBtn" onclick="autoConnect()">Auto Connect</button>
+        <div id="countryButtons">
+            <button onclick="filterByCountry('United States')">🇺🇸 United States</button>
+            <button onclick="filterByCountry('Romania')">🇷🇴 Romania</button>
+            <button onclick="filterByCountry('Netherlands')">🇳🇱 Netherlands</button>
+            <button onclick="filterByCountry('Japan')">🇯🇵 Japan</button>
+        </div>
+    </div>
+
+    <div id="ipAndMap">
+        <ul id="ipList"></ul>
+        <div id="map"></div>
+    </div>
+
+    <script src="ips.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
